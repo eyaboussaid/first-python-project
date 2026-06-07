@@ -1,11 +1,18 @@
 import random
 number = random.randint(1, 10)
-guess = -1
-while guess != number:
+attempts = 3
+while attempts > 0:
     guess = int(input("Guess a number (1-10): "))
-    if guess < number:
-        print("Too low 📉")
-    elif guess > number:
-        print("Too high 📈")
-    else:
+    if guess == number:
         print("Correct 🎉 You win!")
+        break
+    else:
+        attempts -= 1
+        print("Wrong 😅 Remaining attempts:", attempts)
+
+        if guess < number:
+            print("Too low 📉")
+        elif guess > number:
+            print("Too high 📈")
+if attempts == 0:
+    print("Game over 💀 The number was:", number)
