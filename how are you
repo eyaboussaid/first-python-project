@@ -1,0 +1,10 @@
+print("=== Simple AI Chatbot ===")
+name = input("What is your name? ")
+print("Hello", name)
+question = input("How are you today? ")
+if "good" in question:
+    print("Nice 😄")
+elif "bad" in question:
+    print("I hope your day gets better 💙")
+else:
+    print("ah 👀")
