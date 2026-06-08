@@ -1,10 +1,18 @@
-print("=== Simple AI Chatbot ===")
+print("=== Smart Chatbot ===")
 name = input("What is your name? ")
 print("Hello", name)
-question = input("How are you today? ")
-if "good" in question:
-    print("Nice 😄")
-elif "bad" in question:
-    print("I hope your day gets better 💙")
-else:
-    print("ah 👀")
+while True:
+    message = input("Talk to me: ")
+    if "good" in message:
+        print("Nice 😄")
+    elif "bad" in message:
+        print("I hope things get better 💙")
+    elif "happy" in message:
+        print("That is awesome 🎉")
+    elif "study" in message:
+        print("Keep learning AI 🚀")
+    elif "bye" in message:
+        print("Goodbye 👋")
+        break
+    else:
+        print("ah 👀")
